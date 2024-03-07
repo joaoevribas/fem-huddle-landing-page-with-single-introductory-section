@@ -154,14 +154,16 @@ footer {
 }
 
 /* Desktop */
-@media (min-width: 62.5rem) {
+@media (min-width: 67.8125rem) {
   body {
     background-image: url(/images/bg-desktop.svg);
   }
 
   .container {
-    max-width: 79.6875rem;
+    max-width: 90rem;
     margin: 0 auto;
+    padding-left: 5rem;
+    padding-right: 5.3125rem;
   }
 
   .header__logo {
