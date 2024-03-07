@@ -14,7 +14,7 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Violet: hsl(257, 40%, 49%)
+- Violet: 
 - Soft Magenta: hsl(300, 69%, 71%)
 
 ## Typography
@@ -40,9 +40,114 @@ For the social icons, you can use a font icon library. Some suggestions can be f
 > 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma.
 */
 
-/* font-family: "Open Sans", sans-serif; */
-/* font-family: "Poppins", sans-serif; */
+:root {
+  --clr-primary-violet: hsl(257, 40%, 49%);
+  --clr-primary-soft-magenta: hsl(300, 69%, 71%);
+
+  --ff-base: "Open Sans", sans-serif;
+  --ff-headings: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
+  min-height: 100vh;
   background-color: #684bb1;
+  background-image: url(/images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  line-height: 1.5;
+  font-family: var(--ff-base);
+  color: #fff;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.container {
+  max-width: 19rem;
+  margin: 0 auto;
+}
+
+.header__logo {
+  max-width: 7.5rem;
+  margin-top: 2.2rem;
+  margin-bottom: 4.1rem;
+}
+
+.hero {
+  display: grid;
+  text-align: center;
+}
+
+.hero__img {
+  max-width: 18.5rem;
+  margin-bottom: 3.75rem;
+}
+
+.hero__content__title {
+  font-family: var(--ff-headings);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero__content__text {
+  margin-bottom: 1.5rem;
+}
+
+.hero__content__btn {
+  cursor: pointer;
+  color: var(--clr-primary-violet);
+  font-family: var(--ff-headings);
+  font-size: 0.75rem;
+  display: inline-block;
+  width: 66%;
+  padding: 0.6875rem;
+  border: none;
+  border-radius: 25px;
+  margin-bottom: 4rem;
+}
+
+.hero__content__btn:hover {
+  background: var(--clr-primary-soft-magenta);
+  color: #fff;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 0.65625rem;
+  margin-bottom: 2.5rem;
 }
